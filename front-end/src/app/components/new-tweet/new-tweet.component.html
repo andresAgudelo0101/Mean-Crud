@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="containerForm">
+        <form class="form" #form="ngForm" (ngSubmit)="addTweet()">
+            <label for="username">Username</label>
+            <input 
+                type="text" 
+                class="input" 
+                id="username" 
+                name="username"
+                [(ngModel)] = "addTweetRequest.username"
+            />
+            <label for="tweet">Tweet</label>
+            <textarea 
+                id="tweet" 
+                name="tweet"
+                class="text" 
+                rows="4" 
+                cols="120"
+                [(ngModel)] = "addTweetRequest.tweet"
+                >
+            </textarea>
+            <button class="add" type="submit">Agregar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="containerForm">
+        <form class="form" #form="ngForm" (ngSubmit)="updateTweet()">
+            <label for="username">Username</label>
+            <input 
+                type="text" 
+                class="input" 
+                id="username" 
+                name="username"
+                [(ngModel)] = "singleTweet.username"
+            />
+            <label for="tweet">Tweet</label>
+            <input 
+                type="text" 
+                class="input" 
+                id="tweet" 
+                name="tweet"
+                [(ngModel)] = "singleTweet.tweet"
+            />
+            <input 
+                type="text" 
+                id="_id" 
+                name="_id"
+                readonly
+                hidden
+                [(ngModel)] = "singleTweet._id"
+            />
+            <input 
+                type="text" 
+                id="updated" 
+                name="updated"
+                hidden
+                [(ngModel)] = "singleTweet.updated"     
+            />
+            <button class="add" type="submit">Agregar</button>
+        </form>
+    </div>
+</div>

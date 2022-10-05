@@ -4,23 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TweetsComponent } from './components/tweets/tweets.component';
-import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewTweetComponent } from './components/new-tweet/new-tweet.component';
+import { EditTweetComponent } from './components/edit-tweet/edit-tweet.component';
+import { DeleteTweetComponent } from './components/delete-tweet/delete-tweet.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetsComponent,
-    AboutComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewTweetComponent,
+    EditTweetComponent,
+    DeleteTweetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

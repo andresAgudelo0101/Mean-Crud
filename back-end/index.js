@@ -17,9 +17,14 @@ app.get('/tweets',(req,res)=>{
             console.log(err);
             res.json(err);
         }else{
-            res.json(result)
+            res.json(result.reverse())
         }
     })
+});
+
+app.get('/tweets/:id',async (req,res) => {
+  let result = await tweetModel.findOne({_id:req.params.id}).exec();
+  res.send(result);
 });
 
 app.post('/newTweet',async (req,res)=>{
@@ -45,8 +50,12 @@ app.delete('/deleteTweet',async (req,res)=>{
       );
 });
 
-app.put('/updateTweet',(req,res)=>{
-      tweetModel.updateOne({_id: req.body.id}, {tweet:req.body.tweet}).then(
+app.put('/updateTweet/:id',async(req,res)=>{
+  let data = await {
+    id:req.params.id,
+    tweet:req.body.tweet
+  }
+      tweetModel.updateOne({_id: data.id}, {tweet:data.tweet}).then(
         () => {
           res.status(201).json({
             message: 'tweet updated successfully!'
