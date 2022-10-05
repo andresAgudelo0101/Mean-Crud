@@ -1,0 +1,19 @@
+<div class="container233">
+    <div class="containerTweets">
+        <div class="newTweet">
+            <button class="addTweet">+</button>
+            <h3>Nuevo Tuit</h3>
+        </div>
+        <div class="tweetCard" >
+            <div class="tweetCardChild" *ngFor="let tweet of tweets">
+                <h3>{{tweet.username}}</h3>
+                <p>{{tweet.tweet}}</p>
+                <span class="date">{{tweet.updated}}</span>
+                <div class="containerBtns">
+                    <a routerLink="about"><img src="assets/edit.png" ></a>
+                    <a routerLink="about"><img src="assets/delete.png" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+.container233{
+    float: left;
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.containerTweets{
+    width: 500px;
+    height: 89vh;
+    border:dotted 2px white;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerTweets::-webkit-scrollbar{
+    width: 6px;
+    height: 0px;
+}
+
+.containerTweets::-webkit-scrollbar-thumb{
+    background: #1DA1F2;
+    border-radius: 8px;
+}
+
+.newTweet{
+    width:465px;
+    height: auto;
+    border:dotted 2px white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    background-color: #14171A ;
+}
+
+.addTweet{
+    border-radius: 50%;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.5em;
+    height: 30px;
+    width: 30px;
+    border:none;
+    background-color: #1DA1F2;
+    color:#F5F8FA ;
+}
+
+.addTweet:active{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.tweetCard{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.tweetCardChild{
+    border:dotted 2px white;
+    padding: 10px;
+    width: 95%;
+    height: auto;
+    gap: 10px;
+}
+
+.date{
+    font-size: 0.9rem;
+    font-weight: 100;
+    color:#AAB8C2 ;
+}
+
+.containerBtns{
+    display: flex;
+    gap: 5px;
+    padding-top: 6px;
+}
