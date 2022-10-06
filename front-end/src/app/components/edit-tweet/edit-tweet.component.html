@@ -10,13 +10,15 @@
                 [(ngModel)] = "singleTweet.username"
             />
             <label for="tweet">Tweet</label>
-            <input 
-                type="text" 
-                class="input" 
+            <textarea 
                 id="tweet" 
                 name="tweet"
+                class="text" 
+                rows="4" 
+                cols="120"
                 [(ngModel)] = "singleTweet.tweet"
-            />
+            >
+            </textarea>
             <input 
                 type="text" 
                 id="_id" 

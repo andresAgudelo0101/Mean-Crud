@@ -11,7 +11,7 @@
                 <span class="date">{{tweet.updated}}</span>
                 <div class="containerBtns">
                     <a [routerLink]="['/edit', tweet._id]"><img src="assets/edit.png" ></a>
-                    <a routerLink="about"><img src="assets/delete.png" ></a>
+                    <a (click)="confirmDelete(tweet._id)" class="btnDelete"><img src="assets/delete.png" ></a>
                 </div>
             </div>
         </div>

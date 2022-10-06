@@ -33,4 +33,7 @@ export class TweetsService {
     return this.http.put<tweet>(this.baseApi + '/updateTweet/' + id ,{tweet:updateTweetRequest.tweet});
   }
 
+  deleteTweet(id:string):Observable<tweet>{
+    return this.http.delete<tweet>(this.baseApi + '/deleteTweet/' + id);
+  }
 }
