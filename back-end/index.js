@@ -34,8 +34,8 @@ app.post('/newTweet',async (req,res)=>{
     res.send(tweet)
 });
 
-app.delete('/deleteTweet',async (req,res)=>{
-    tweetModel.deleteOne({_id: req.body.id}).then(
+app.delete('/deleteTweet/:id',async (req,res)=>{
+    tweetModel.deleteOne({_id: req.params.id}).then(
         () => {
           res.status(200).json({
             message: 'Deleted!'

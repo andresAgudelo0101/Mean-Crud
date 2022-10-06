@@ -3,4 +3,7 @@
     height: 10vh;
     border:dotted 2px white;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
