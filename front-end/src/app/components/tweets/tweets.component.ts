@@ -12,6 +12,7 @@ import { TweetsService } from 'src/app/services/tweets.service';
 export class TweetsComponent implements OnInit {
 
   tweets:tweet[] = [];
+  card: tweet[] = [];
 
   constructor(private tweetService:TweetsService,private router:Router) { }
 
@@ -28,9 +29,9 @@ export class TweetsComponent implements OnInit {
 
   }
 
-  confirmDelete(id:string){
+  confirmDelete(tweet:tweet){
     if(confirm('deseas eliminar este tweet?')){
-      this.deleteTweet(id)
+      this.deleteTweet(tweet._id)
     }
   }
 

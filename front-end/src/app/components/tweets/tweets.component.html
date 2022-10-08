@@ -1,19 +1,13 @@
 <div class="container233">
-    <div class="containerTweets">
-        <div class="newTweet">
-            <button class="addTweet" routerLink="newTweet">+</button>
-            <h3>Nuevo Tuit</h3>
-        </div>
-        <div class="tweetCard" >
-            <div class="tweetCardChild" *ngFor="let tweet of tweets">
-                <h3>{{tweet.username}}</h3>
-                <p>{{tweet.tweet}}</p>
-                <span class="date">{{tweet.updated}}</span>
-                <div class="containerBtns">
-                    <a [routerLink]="['/edit', tweet._id]"><img src="assets/edit.png" ></a>
-                    <a (click)="confirmDelete(tweet._id)" class="btnDelete"><img src="assets/delete.png" ></a>
-                </div>
-            </div>
-        </div>
+  <div class="containerTweets">
+    <div class="newTweet">
+      <button class="addTweet" routerLink="newTweet">+</button>
+      <h3>Nuevo Tuit</h3>
     </div>
+    <div class="tweetCard">
+      <ng-container *ngFor="let singleTweet of tweets"> 
+        <app-tweet (tweetEmitter)="confirmDelete($event)"   [tweet]="singleTweet"></app-tweet>
+      </ng-container>
+    </div>
+  </div>
 </div>

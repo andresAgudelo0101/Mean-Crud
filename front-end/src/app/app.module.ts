@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewTweetComponent } from './components/new-tweet/new-tweet.component';
 import { EditTweetComponent } from './components/edit-tweet/edit-tweet.component';
 import { FormsModule } from '@angular/forms';
+import { TweetComponent } from './components/tweet/tweet.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     NewTweetComponent,
-    EditTweetComponent
+    EditTweetComponent,
+    TweetComponent
   ],
   imports: [
     BrowserModule,
