@@ -11,6 +11,10 @@ app.use(cors());
 
 mongoose.connect("mongodb+srv://andres11298:Andres11298@cluster0.tzcxeta.mongodb.net/misiontic2022?retryWrites=true&w=majority");
 
+app.get('/',(req,res)=>{
+   res.send({"works":"api works succefully plis navigate to other routes like /tweets"});
+});
+
 app.get('/tweets',(req,res)=>{
     tweetModel.find({},(err,result)=>{
         if(err){
