@@ -9,7 +9,7 @@ import { tweet } from '../models/tweet.model';
 })
 export class TweetsService {
 
-  baseApi:string = environment.urlApi;
+  baseApi:string = 'https://tweeter-api.onrender.com';
 
   constructor(private http:HttpClient) { }
 
