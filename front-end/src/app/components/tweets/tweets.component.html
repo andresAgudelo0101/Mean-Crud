@@ -6,7 +6,7 @@
     </div>
     <div class="tweetCard">
       <ng-container *ngFor="let singleTweet of tweets"> 
-        <app-tweet (tweetEmitter)="confirmDelete($event)"   [tweet]="singleTweet"></app-tweet>
+        <app-tweet (tweetEmitter)="confirmDelete($event)" (like)="displayLike($event)"  [tweet]="singleTweet"></app-tweet>
       </ng-container>
     </div>
   </div>

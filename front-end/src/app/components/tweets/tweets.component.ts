@@ -13,7 +13,6 @@ export class TweetsComponent implements OnInit {
 
   tweets:tweet[] = [];
   card: tweet[] = [];
-
   constructor(private tweetService:TweetsService,private router:Router) { }
 
   ngOnInit(): void {
@@ -44,4 +43,9 @@ export class TweetsComponent implements OnInit {
     })
   }
 
+  displayLike(display:boolean){
+    console.log(display);
+  }
+
+  
 }

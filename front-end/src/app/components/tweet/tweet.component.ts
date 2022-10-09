@@ -8,8 +8,17 @@ import { tweet } from 'src/app/models/tweet.model';
 })
 export class TweetComponent implements OnInit {
 
- @Input() tweet: tweet = {} as tweet;
- @Output() tweetEmitter = new EventEmitter<tweet>();
+
+@Input() tweet: tweet = {} as tweet;
+@Output() tweetEmitter = new EventEmitter<tweet>();
+@Output() like = new EventEmitter;
+
+img1:string = "assets/like.png";
+img2:string = "assets/like2.png";
+
+
+isLike:boolean = false;
+
 
   constructor() { }
 
@@ -19,5 +28,10 @@ export class TweetComponent implements OnInit {
   confirmDelete(){
     this.tweetEmitter.emit(this.tweet)
   }
+
+  handleLike(){
+    this.like.emit(this.isLike = !this.isLike);
+  }
+  
 
 }

@@ -5,5 +5,9 @@
     <div class="containerBtns">
         <a [routerLink]="['/edit', tweet._id]"><img src="assets/edit.png" ></a>
         <a (click)="confirmDelete()" ><img src="assets/delete.png" ></a>
+        <a (click)="handleLike()">
+            <img *ngIf="isLike" src={{img1}}>
+            <img *ngIf="!isLike" src={{img2}}>
+        </a>
     </div>
 </div>
