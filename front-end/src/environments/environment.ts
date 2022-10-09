@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlApi:'http://localhost:3001'
+  urlApi:'https://tweeter-api.onrender.com'
 };
 
 /*
