@@ -1,7 +1,7 @@
 <div class="tweetCardChild" >
     <h3>{{tweet.username}}</h3>
     <p>{{tweet.tweet}}</p>
-    <span class="date">{{tweet.updated}}</span>
+    <span class="date">{{tweet.updated | date:'short'}}</span>
     <div class="containerBtns">
         <a [routerLink]="['/edit', tweet._id]"><img src="assets/edit.png" ></a>
         <a (click)="confirmDelete()" ><img src="assets/delete.png" ></a>
