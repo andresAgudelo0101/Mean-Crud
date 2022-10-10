@@ -9,7 +9,7 @@ import { tweet } from '../models/tweet.model';
 })
 export class TweetsService {
 
-  baseApi:string = 'https://tweeter-api.onrender.com';
+  baseApi:string = 'https://mean-crud-fake-tweet-api.up.railway.app';
 
   constructor(private http:HttpClient) { }
 
