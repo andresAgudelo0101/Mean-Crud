@@ -19,7 +19,7 @@ export class TweetsService {
 
   addTweet(addTweetRequest:tweet):Observable<tweet>{
     const formatedData = {
-      username:addTweetRequest.username,
+      username:'@' + addTweetRequest.username,
       tweet:addTweetRequest.tweet
     };
     return this.http.post<tweet>(this.baseApi + '/newTweet', formatedData);
