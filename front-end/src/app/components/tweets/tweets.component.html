@@ -4,10 +4,18 @@
       <button class="addTweet" routerLink="newTweet">+</button>
       <h3>Nuevo Tuit</h3>
     </div>
-    <div class="tweetCard">
+
+    
+
+    <div class="tweetCard" *ngIf="tweets.length>=1">
       <ng-container *ngFor="let singleTweet of tweets"> 
         <app-tweet (tweetEmitter)="confirmDelete($event)" (like)="displayLike($event)"  [tweet]="singleTweet"></app-tweet>
       </ng-container>
     </div>
+
   </div>
+</div>
+
+<div *ngIf="tweets.length<=0" class="loadingContainer">
+  <app-loading></app-loading>
 </div>

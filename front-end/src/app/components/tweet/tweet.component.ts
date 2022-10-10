@@ -13,8 +13,8 @@ export class TweetComponent implements OnInit {
 @Output() tweetEmitter = new EventEmitter<tweet>();
 @Output() like = new EventEmitter;
 
-img1:string = "assets/like.png";
-img2:string = "assets/like2.png";
+img2:string = "assets/like.png";
+img1:string = "assets/like2.png";
 
 
 isLike:boolean = false;

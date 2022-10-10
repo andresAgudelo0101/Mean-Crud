@@ -11,6 +11,7 @@ import { NewTweetComponent } from './components/new-tweet/new-tweet.component';
 import { EditTweetComponent } from './components/edit-tweet/edit-tweet.component';
 import { FormsModule } from '@angular/forms';
 import { TweetComponent } from './components/tweet/tweet.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TweetComponent } from './components/tweet/tweet.component';
     HeaderComponent,
     NewTweetComponent,
     EditTweetComponent,
-    TweetComponent
+    TweetComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
