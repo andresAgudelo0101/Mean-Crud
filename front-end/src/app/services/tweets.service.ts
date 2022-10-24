@@ -15,7 +15,7 @@ export class TweetsService {
   constructor(private http:HttpClient) { }
 
   getAllTweets():Observable<tweet[]>{
-    return this.http.get<tweet[]>(this.baseApi + '/tweets')
+    return this.http.get<tweet[]>(this.baseApi2 + '/tweets')
   }
 
   addTweet(addTweetRequest:tweet):Observable<tweet>{
