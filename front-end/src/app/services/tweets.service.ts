@@ -10,6 +10,7 @@ import { tweet } from '../models/tweet.model';
 export class TweetsService {
 
   baseApi:string = 'https://mean-crud-fake-tweet-api.up.railway.app';
+  baseApi2:string = 'https://tweeter-api.onrender.com';
 
   constructor(private http:HttpClient) { }
 
@@ -22,18 +23,18 @@ export class TweetsService {
       username:'@' + addTweetRequest.username,
       tweet:addTweetRequest.tweet
     };
-    return this.http.post<tweet>(this.baseApi + '/newTweet', formatedData);
+    return this.http.post<tweet>(this.baseApi2 + '/newTweet', formatedData);
   }
 
   getTweet(id:string):Observable<tweet>{
-    return this.http.get<tweet>(this.baseApi + '/tweets/' + id);
+    return this.http.get<tweet>(this.baseApi2 + '/tweets/' + id);
   }
 
   updateTweet(id:string, updateTweetRequest:tweet):Observable<tweet>{
-    return this.http.put<tweet>(this.baseApi + '/updateTweet/' + id ,{tweet:updateTweetRequest.tweet});
+    return this.http.put<tweet>(this.baseApi2 + '/updateTweet/' + id ,{tweet:updateTweetRequest.tweet});
   }
 
   deleteTweet(id:string):Observable<tweet>{
-    return this.http.delete<tweet>(this.baseApi + '/deleteTweet/' + id);
+    return this.http.delete<tweet>(this.baseApi2 + '/deleteTweet/' + id);
   }
 }
