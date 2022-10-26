@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const tweetModel = require('./models/Tweets');
 const cors = require('cors');
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5001;
 
 app.use(express.json());
 app.use(cors());
